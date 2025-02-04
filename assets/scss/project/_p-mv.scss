@@ -1,0 +1,201 @@
+@use "../global" as *;
+
+// $timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+$timing-function: ease;
+
+.p-mv {
+    position: relative;
+    overflow-x: clip;
+    background: $color-bg url(../images/mv/bg-lattice.png) no-repeat center center / cover;
+    opacity: 0;
+    transform: translate3d(0, 25px, 0);
+    transition: transform 0.6s $timing-function;
+    @include mq('sm') {
+        margin-top: $header-height-sm;
+        z-index: 8;
+    }
+    @include mq('md') {
+        margin-top: $header-height-md;
+    }
+}
+.p-mv.is-show {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.p-mv__inner {
+    position: relative;
+    margin-inline: auto;
+    @include mq('sm') {
+        padding: 26px 12px 22px;
+        max-width: 480px;
+    }
+    @include mq('md') {
+        padding-top: 4rem;
+        padding-right: 6rem;
+        padding-bottom: 5rem;
+        padding-left: 4rem;
+        max-width: 1440px;
+    }
+    @include mq('xl') {
+        padding-top: 5.4rem;
+        padding-right: 8rem;
+        padding-bottom: 6rem;
+        padding-left: 6rem;
+    }
+}
+
+.p-mv__top {
+    @include mq('md') {
+        display: flex;
+        align-items: flex-end;
+        gap: 6.4rem;
+    }
+}
+
+.p-mv__top-l {
+    @include mq('md') {
+        width: calc(100% - 65.38% - 6.4rem);
+    }
+
+    .p-mv__logo {
+        position: relative;
+        z-index: 2;
+        @include mq('sm') {
+            width: 204px;
+            margin-inline: auto;
+        }
+        @include mq('md') {
+            width: 100%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+
+    .p-mv__part {
+        position: relative;
+        z-index: 2;
+        @include mq('sm') {
+            margin-top: 4rem;
+            width: 118px;
+            margin-inline: auto;
+        }
+        @include mq('md') {
+            width: 66.32%;
+            margin-top: 4rem;
+        }
+    }
+}
+
+.p-mv__top-r {
+    @include mq('md') {
+        width: 65.38%;
+    }
+
+    .p-mv__image {
+        @include mq('sm') {
+            margin-top: 1.6rem;
+            width: 100vw;
+            margin-inline: calc(50% - 50vw);
+            box-shadow: 6px 6px 16px 3px rgba(0, 68, 149, 0.30);
+        }
+        @include mq('md') {
+            box-shadow: 16px 16px 20px 5px rgba(0, 68, 149, 0.30);
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.p-mv__bottom {
+    @include mq('md') {
+        display: flex;
+        align-items: center;
+        gap: 3.2rem;
+        margin-top: 2.2rem;
+    }
+}
+
+.p-mv__bottom-l {
+    @include mq('sm') {
+        margin-top: 24px;
+    }
+    @include mq('md') {
+        margin-top: 2rem;
+        width: calc(100% - 40.76% - 3.2rem);
+    }
+    
+    .p-mv__title {
+        color: $color-accent;
+        font-weight: 700;
+        @include mq('sm') {
+            font-size: 2.4rem;
+            text-align: center;
+        }
+        @include mq('md') {
+            font-size: 3.4rem;
+            line-height: 1.2;
+            filter: drop-shadow(2px 2px 3px rgba(0, 68, 149, 0.40));
+        }
+    
+        span {
+            display: inline-block;
+        }
+    }
+    
+    .p-mv__subTitle {
+        color: $color-accent;
+        font-weight: 700;
+        line-height: 1.3;
+        @include mq('sm') {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            text-align: center;
+        }
+        @include mq('md') {
+            margin-top: 2.8rem;
+            font-size: 2.4rem;
+            filter: drop-shadow(2px 2px 3px rgba(0, 68, 149, 0.40));
+        }
+    
+        span {
+            display: block;
+        }
+    }
+}
+
+.p-mv__bottom-r {
+    @include mq('md') {
+        width: 40.76%;
+    }
+    .p-mv__dates {
+        filter: drop-shadow(4px 4px 8px rgba(0, 68, 149, 0.30));
+        @include mq('sm') {
+            margin-top: 2.2rem;
+            width: 28rem;
+            margin-inline: auto;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.p-mv__ribbon {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    @include mq('md') {
+        top: -5rem;
+    }
+    @include mq('xxl') {
+        width: 1440px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

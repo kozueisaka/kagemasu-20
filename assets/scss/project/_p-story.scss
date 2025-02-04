@@ -1,0 +1,111 @@
+@use "../global" as *;
+
+.p-story {
+    position: relative;
+    color: $color-accent;
+    background: url(../images/story/bg-object.png) no-repeat center bottom / cover;
+    @include mq('sm') {
+        padding-top: 60px;
+        padding-bottom: 137px;
+        background-position: 70% bottom;
+    }
+    @include mq('md') {
+        padding-top: 7.2rem;
+        padding-bottom: 17.8rem;
+    }
+    @include mq('xl') {
+        padding-bottom: 14.79vw;
+    }
+
+    // グミ
+    &::after {
+        @include mq('md') {
+            content:'';
+            display: block;
+            width: 12.6rem;
+            height: 13rem;
+            background: url(../images/story/story-deco.png) no-repeat center center / contain;
+            position: absolute;
+            right: 10rem;
+            bottom: 32%;
+        }
+        @include mq('xxl') {
+            right: calc((100vw - #{$canvas-width}) / 2 + 10rem);
+        }
+    }
+}
+
+.p-story__title {
+    color: $color-accent;
+}
+
+.p-story__lead {
+    text-align: center;
+    font-weight: $semibold;
+    display: grid;
+    @include mq('sm') {
+        gap: 4px;
+        margin-top: 40px;
+    }
+    @include mq('md') {
+        gap: 0.8rem;
+        margin-top: 6rem;
+    }
+    span {
+        display: block;
+        width: fit-content;
+        margin-inline: auto;
+        color: $color-white;
+        @include mq('sm') {
+            font-size: 16px;
+            letter-spacing: -0.06em;
+            padding-inline: 4px;
+            background-color: rgba($color-accent, 0.85);
+        }
+        @include mq('md') {
+            font-size: 4.4rem;
+            letter-spacing: -0.03em;
+            padding-inline: 1rem;
+            background-color: $color-accent;
+        }
+    }
+}
+
+.p-story__content {
+    @include mq('sm') {
+        margin-top: 35px;
+    }
+    @include mq('md') {
+        margin-top: 6rem;
+        max-width: 660px;
+        margin-inline: auto;
+    }
+}
+
+.p-story__texts {
+    p {
+        font-weight: $semibold;
+        @include mq('sm') {
+            font-size: 14px;
+            line-height: 2.28;
+        }
+        @include mq('md') {
+            text-align: center;
+        }
+    }
+    p + p {
+        margin-top: 1.7em;
+    }
+}
+
+
+.p-story__button {
+    display: flex;
+    justify-content: center;
+    @include mq('sm') {
+        margin-top: 3.5rem;
+    }
+    @include mq('md') {
+        margin-top: 1rem;
+    }
+}

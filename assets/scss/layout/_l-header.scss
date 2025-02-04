@@ -1,0 +1,38 @@
+@use "sass:map";
+@use "../global" as *;
+
+.l-header {
+    position: fixed;
+	top: 0;
+    left: 0;
+    width: 100%;
+    z-index: $layer-header;
+    @include mq('sm') {
+        height: $header-height-sm;
+    }
+    @include mq('md') {
+        height: $header-height-md;
+    }
+}
+
+.l-header__nav-area {
+    @include mq('sm') {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: $layer-menu;
+        width: clamp(180px, 50vw, 300px);
+        height: 100vh;
+        visibility: hidden;
+        padding-top: 80px;
+        background-color: $color-cream;
+    }
+}
+
+.l-header__nav-area.is-active {
+    right: 0;
+    visibility: visible;
+}
+
+
+

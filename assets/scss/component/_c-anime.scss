@@ -1,0 +1,90 @@
+@use "../global" as *;
+
+$animation-speed: 0.4s;
+
+.c-anime {
+    opacity: 0;
+}
+
+// fade-in
+.c-anime-fadeIn.js-anime-active {
+    animation: fadeIn $animation-speed forwards;
+}
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// fade-in from bottom
+.c-anime-fadeInUp.js-anime-active {
+    animation: fadeInUp $animation-speed forwards;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+        transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// fade-in from top
+.c-anime-fadeInDown.js-anime-active {
+    animation: fadeInDown $animation-speed forwards;
+}
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+        transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// fade-in from left
+.c-anime-fadeInLeft.js-anime-active {
+    animation: fadeInLeft $animation-speed forwards;
+    @include mq('sm') {
+        animation: fadeInUp $animation-speed forwards;
+    }
+}
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-25px);
+        transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// fade-in from right
+.c-anime-fadeInRight.js-anime-active {
+    animation: fadeInRight $animation-speed forwards;
+    @include mq('sm') {
+        animation: fadeInUp $animation-speed forwards;
+    }
+}
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(25px);
+        transition-timing-function: cubic-bezier(0, 0.4, 0.2, 1);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

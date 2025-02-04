@@ -1,0 +1,13 @@
+@use "../global" as *;
+
+.l-hamburger {
+    @include mq('sm-md') {
+        position: fixed;
+        top: 22.5px;
+        right: 16px;
+        z-index: $layer-hamburger;
+    }
+    @include mq('md') {
+        display: none;
+    }
+}

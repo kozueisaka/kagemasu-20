@@ -1,0 +1,13 @@
+@use "../global" as *;
+
+.u-color-main {
+    color: $color-main;
+}
+
+.u-color-accent {
+    color: $color-accent;
+}
+
+.u-color-key {
+    color: $color-key;
+}

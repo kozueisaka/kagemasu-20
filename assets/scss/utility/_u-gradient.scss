@@ -1,0 +1,9 @@
+@use "../global" as *;
+
+.u-bg-gradient--main {
+    background: linear-gradient(to right, #165896, #061B2F);
+}
+
+.u-bg-gradient--accent {
+    background: linear-gradient(to right, #FF8709, #F34100);
+}

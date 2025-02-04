@@ -1,0 +1,74 @@
+@use "../global" as *;
+
+.p-cv-button {
+    display: none;
+    border-radius: 25em;
+	background-color: $color-discord;
+
+    @include mq('sm') {
+        width: 100px;
+        height: 100px;
+    }
+    @include mq('md') {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+.p-cv-button__link {
+    display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	text-decoration: none;
+
+    @include mq('sm') {
+        padding: 0
+    }
+    @include mq('md') {
+        padding: 14px 10px;
+    }
+
+    &:hover {
+        @media (hover: hover) and (pointer: fine) {
+            opacity: $hover-opacity;
+        }
+    }
+}
+
+.p-cv-button__text {
+    position: relative;
+	display: inline-block;
+	margin-top: 54px;
+	color: $color-white;
+	font-weight: bold;
+	font-family: $ff-gothic;
+	font-size: 10px;
+
+    @include mq('sm') {
+		margin-top: 39px
+    }
+
+
+    &::before {
+        position: absolute;
+        content: "";
+        background-image: url("../images/common/icon-discord.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+        left: 50%;
+
+        @include mq('sm') {
+            top: -15px;
+            width: 29px;
+            height: 23px;
+        }
+        @include mq('md') {
+            top: -24px;
+            width: 46px;
+            height: 36px;
+        }
+    }
+}

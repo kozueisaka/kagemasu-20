@@ -1,0 +1,168 @@
+@use "../global" as *;
+
+.p-flow {
+    position: relative;
+    background-color: $color-bg-main;
+    color: $color-white;
+    @include mq('sm') {
+        padding-top: 60px;
+        padding-bottom: 90px;
+    }
+    @include mq('md') {
+        padding-top: 10rem;
+        padding-bottom: 10.2rem;
+    }
+    @include mq('xxl') {
+        padding-bottom: 7.08vw;
+    }
+    &::before {
+        content:'';
+        display: block;
+        width: 100%;
+        height: 50vw;
+        background-color: $color-bg-main;
+        position: absolute;
+        left: 0;
+        top: -50vw;
+        z-index: -1;
+    }
+    &::after {
+        content:'';
+        display: block;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        z-index: 2;
+        @include mq('sm') {
+            width: 100vw;
+            height: 22vw;
+            bottom: -13vw;
+            background-image: url(../images/flow/bottom-object_sm.png);
+        }
+        @include mq('md') {
+            width: 100vw;
+            height: 13.05vw;
+            bottom: -7.8vw;
+            background-image: url(../images/flow/bottom-object_lg.png);
+        }
+    }
+}
+
+.p-flow__text {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    font-weight: $bold;
+    @include mq('sm') {
+        font-size: 20px;
+    }
+    @include mq('md') {
+        font-size: 2.8rem;
+    }
+
+    span {
+        display: inline-block;
+    }
+}
+
+.p-flow__content {
+    @include mq('sm') {
+        position: relative;
+    }
+    @include mq('md') {
+        display: flex;
+        align-items: center;
+        gap: 3%;
+        max-width: 1440px;
+        margin-inline: auto;
+    }
+}
+
+.p-flow__list {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    @include mq('sm') {
+        margin-top: 72px;
+        padding-inline: $padding-sm;
+        gap: 24px;
+    }
+    @include mq('md') {
+        gap: 1.6rem;
+    }
+    li {
+        display: flex;
+        align-items: center;
+        line-height: 1.4;
+        text-shadow: 0px 0px 16px rgba(255, 252, 232, 0.60);
+        @include mq('sm') {
+            font-size: 14px;
+            gap: 12px;
+        }
+        @include mq('md') {
+            font-size: 2.4rem;
+            gap: 2rem;
+        }
+        span {
+            display: block;
+            margin-top: 4px;
+            font-weight: $semibold;
+            @include mq('sm') {
+                font-size: 20px;
+                letter-spacing: -0.08em;
+            }
+            @include mq('md') {
+                font-size: 4rem;
+            }
+            @include mq('xl') {
+                font-size: 4.8rem;
+            }
+        }
+        span.inline {
+            @include mq('md') {
+                display: inline;
+            }
+        }
+        &::before {
+            content:'';
+            display: block;
+            flex-shrink: 0;
+            @include mq('sm') {
+                width: 51px;
+                height: 51px;
+            }
+            @include mq('md') {
+                width: 14.6rem;
+                height: 14.6rem;
+            }
+        }
+        &:first-child::before {
+            background: url(../images/flow/icon-flow01.png) no-repeat center center / contain;
+        }
+        &:nth-child(2)::before {
+            background: url(../images/flow/icon-flow02.png) no-repeat center center / contain;
+        }
+        &:nth-child(3)::before {
+            background: url(../images/flow/icon-flow03.png) no-repeat center center / contain;
+        }
+    }
+}
+
+.p-flow__image {
+    @include mq('sm') {
+        width: min(60vw, 250px);
+        position: absolute;
+        // right: -20%;
+        right: -8rem;
+        // bottom: -47%;
+        bottom: -10rem;
+        mix-blend-mode: multiply;
+    }
+    @include mq('md') {
+        width: 27%;
+    }
+}

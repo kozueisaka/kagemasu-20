@@ -1,0 +1,8 @@
+.git 
+package.json
+package-lock.json
+node_modules/*
+gulpfile.js
+assets/images/_old/*
+assets/css/*
+assets/swiper/*

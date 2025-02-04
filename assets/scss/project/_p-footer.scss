@@ -1,0 +1,17 @@
+@use "../global" as *;
+
+.p-footer {
+    background-color: $color-bg-main;
+    color: $color-cream;
+}
+
+.p-footer__inner {
+    padding-top: 60px;
+	padding-bottom: 136px;
+}
+
+.p-footer__copy {
+    font-family: $ff-gothic;
+    text-align: center;
+	font-size: 14px;
+}

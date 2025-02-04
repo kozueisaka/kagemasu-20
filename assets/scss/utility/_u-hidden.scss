@@ -1,0 +1,29 @@
+@use "../global" as *;
+
+/* 非表示
+==================================== */
+.u-hidden-xl {
+	// PC時に非表示
+	@include mq("xl") {
+		display: none;
+	}
+}
+
+.u-hidden-lg {
+	@include mq("lg") {
+		display: none;
+	}
+}
+
+.u-hidden-md {
+	@include mq("md") {
+		display: none;
+	}
+}
+
+.u-hidden-sm {
+	// スマホ時に非表示
+	@include mq("sm") {
+		display: none;
+	}
+}

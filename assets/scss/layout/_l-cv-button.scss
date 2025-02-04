@@ -1,0 +1,14 @@
+@use "../global" as *;
+
+.l-cv-button {
+    position: fixed;
+	bottom: 40px;
+	z-index: $layer-cvBtn;
+
+	@include mq('sm') {
+		right: 24px;
+	}
+	@include mq('md') {
+		right: 94px;
+	}
+}

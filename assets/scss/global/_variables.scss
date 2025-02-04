@@ -1,0 +1,92 @@
+// 色
+$color-main: #000000;
+$color-accent: #004495;
+// $color-campaign: #ED6BEF;
+$color-campaign: #C79B57;
+$color-discord: #5865F2;
+$color-key: #4F1EDC;
+$color-gold: #C79B57;
+
+$color-cream: #FFFCF2;
+// $color-green: #2B3C19;
+
+$color-text: #404040;
+$color-black: #000000;
+$color-white: #FFFFFF;
+
+$color-bg: #F0EDEB;
+$color-bg-main: #48A2E1;
+
+// フォント
+$ff-base: 'Noto Serif JP', 'Noto Sans JP', sans-serif;
+$ff-gothic: 'Noto Sans JP', sans-serif;
+$ff-serif: 'Noto Serif JP', serif;
+
+$fz-base: 2rem;
+$fz-base-sm: 16px;
+$fw-base: 400;
+$lh-base: 1.6;
+
+// フォントウェイト
+$exlight: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semibold: 600;
+$bold: 700;
+$black: 900;
+
+// opacity
+$hover-opacity: 0.7;
+
+// レイアウト
+$canvas-width: 1440px;
+$inner-width: 1200px; // インナー幅サイズ
+$inner-width-no-unit: 1200;
+// $inner-width-lg: 1140px;
+$sp-max-width: 767px; // スマホサイズ767pxまで
+
+$padding-base: 30px;
+$padding-sm: 16px;
+
+$header-height-sm: 60px;
+$header-height-md: 80px;
+
+// ブレークポイント
+$breakpoints: (
+	// スマホ以下
+	"sm": "screen and (max-width: #{$sp-max-width})",
+
+	// タブレット以上
+	"md": "screen and (min-width: #{$sp-max-width + 1px})",
+
+	// タブレットのみ
+	"md-only": "screen and (min-width: #{$sp-max-width + 1px}) and (max-width: 991px)",
+
+	"sm-md": "screen and (max-width: 991px)",
+
+	// 必要に応じて
+	"lg": "screen and (min-width: 992px)",
+
+	// PC
+	"xl": "screen and (min-width: #{$inner-width})",
+
+	"xxl": "screen and (min-width: #{$canvas-width})"
+);
+
+// 重なり順の定義
+$layer: (
+	loading: 300,
+	modal: 100,
+	drawer: 40,
+	floating: 30,
+	header: 20,
+	footer: 10,
+	default: 1
+);
+$layer-loader: 100;
+$layer-hamburger: 90;
+$layer-header: 80;
+$layer-menu: 70;
+$layer-cvBtn: 60;
+

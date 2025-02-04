@@ -1,0 +1,18 @@
+@use "../global" as *;
+
+.l-loading {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: $layer-loader;
+}
+
+.l-loading__cont {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}

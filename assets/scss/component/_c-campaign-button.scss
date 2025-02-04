@@ -1,0 +1,23 @@
+@use "../global" as *;
+
+.c-campaign-button {
+    max-width: 100%;
+    @include mq('sm') {
+        width: 27.6rem;
+        transform: translateX(15px);
+    }
+    @include mq('md') {
+        width: min(44.79vw, 645px);
+    }
+    a {
+        display: block;
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+        img {
+            width: 100%;
+        }
+    }
+}

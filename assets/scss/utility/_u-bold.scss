@@ -1,0 +1,9 @@
+@use "../global" as *;
+
+.u-bold {
+    font-weight: $bold;
+}
+
+.u-semibold {
+    font-weight: $semibold;
+}
