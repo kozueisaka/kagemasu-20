@@ -59,7 +59,7 @@
         @include mq('sm') {
             font-size: 16px;
             letter-spacing: -0.06em;
-            padding-inline: 4px;
+            padding: 2px 12px;
             background-color: rgba($color-accent, 0.85);
         }
         @include mq('md') {
@@ -102,9 +102,6 @@
 .p-story__button {
     display: flex;
     justify-content: center;
-    @include mq('sm') {
-        margin-top: 3.5rem;
-    }
     @include mq('md') {
         margin-top: 1rem;
     }

@@ -1,15 +1,15 @@
 @use "../global" as *;
 
-// $timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-$timing-function: ease;
+$timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+// $timing-function: ease;
 
 .p-mv {
     position: relative;
     overflow-x: clip;
     background: $color-bg url(../images/mv/bg-lattice.png) no-repeat center center / cover;
     opacity: 0;
-    transform: translate3d(0, 25px, 0);
-    transition: transform 0.6s $timing-function;
+    transform: translateY(25px);
+    transition: all 0.6s $timing-function;
     @include mq('sm') {
         margin-top: $header-height-sm;
         z-index: 8;
@@ -20,7 +20,7 @@ $timing-function: ease;
 }
 .p-mv.is-show {
     opacity: 1;
-    transform: translate3d(0, 0, 0);
+    transform: translateY(0);
 }
 
 .p-mv__inner {
@@ -46,14 +46,20 @@ $timing-function: ease;
 }
 
 .p-mv__top {
+    display: flex;
+    @include mq('sm') {
+        flex-direction: column;
+    }
     @include mq('md') {
-        display: flex;
         align-items: flex-end;
         gap: 6.4rem;
     }
 }
 
 .p-mv__top-l {
+    @include mq('sm') {
+        display: contents;
+    }
     @include mq('md') {
         width: calc(100% - 65.38% - 6.4rem);
     }
@@ -62,6 +68,7 @@ $timing-function: ease;
         position: relative;
         z-index: 2;
         @include mq('sm') {
+            order: 1;
             width: 204px;
             margin-inline: auto;
         }
@@ -77,6 +84,7 @@ $timing-function: ease;
         position: relative;
         z-index: 2;
         @include mq('sm') {
+            order: 3;
             margin-top: 4rem;
             width: 118px;
             margin-inline: auto;
@@ -89,6 +97,9 @@ $timing-function: ease;
 }
 
 .p-mv__top-r {
+    @include mq('sm') {
+        order: 2;
+    }
     @include mq('md') {
         width: 65.38%;
     }
@@ -121,7 +132,7 @@ $timing-function: ease;
 
 .p-mv__bottom-l {
     @include mq('sm') {
-        margin-top: 24px;
+        margin-top: 18px;
     }
     @include mq('md') {
         margin-top: 2rem;
@@ -133,6 +144,7 @@ $timing-function: ease;
         font-weight: 700;
         @include mq('sm') {
             font-size: 2.4rem;
+            line-height: 1.4;
             text-align: center;
         }
         @include mq('md') {
@@ -172,11 +184,14 @@ $timing-function: ease;
         width: 40.76%;
     }
     .p-mv__dates {
-        filter: drop-shadow(4px 4px 8px rgba(0, 68, 149, 0.30));
         @include mq('sm') {
             margin-top: 2.2rem;
             width: 28rem;
             margin-inline: auto;
+            filter: drop-shadow(3px 3px 8px rgba(0, 68, 149, 0.25));
+        }
+        @include mq('md') {
+            filter: drop-shadow(4px 4px 8px rgba(0, 68, 149, 0.30));
         }
         img {
             width: 100%;
