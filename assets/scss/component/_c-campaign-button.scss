@@ -3,7 +3,7 @@
 .c-campaign-button {
     max-width: 100%;
     @include mq('sm') {
-        width: 27.6rem;
+        width: clamp(276px, 73.6vw, 330px);
         transform: translateX(15px);
     }
     @include mq('md') {
